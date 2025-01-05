@@ -1,0 +1,162 @@
+
+
+body {
+  height: 100vh;
+  padding: 10px;
+}
+
+header {
+  height: 10vh;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.categoriesDisplayContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.categoriesDisplayList {
+  height: 70px;
+  min-width: 80px;
+  margin-right: 20px;
+}
+.categoriesDisplayList img {
+  height: 70px;
+  width: 80px;
+ 
+}
+
+.trendingDisplayContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.trendingDisplayList {
+  
+  height: 200px;
+  min-width: 150px;
+  margin-right: 20px;
+}
+
+.trendingDisplayList img{
+  height: 160px;
+  width: 150px;
+}
+.trending{
+  font-weight: bold;
+  margin-left: 10px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.brandDisplayContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.brandDisplayList {
+ 
+  height: 80px;
+  min-width: 80px;
+  margin-right: 20px;
+}
+.brandDisplayList img {
+  
+  height: 60px;
+  min-width: 80px;
+
+}
+.brandName{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.tile{
+  text-transform: capitalize;
+  width: 150px;
+  height: 230px;
+  font-size: 10px;
+  
+}
+.tile img{
+  width: 150px;
+  height: 190px;
+  
+}
+.tilesListContainer{
+  margin-top: 20px;
+}
+
+.adminButtons{
+  display: flex;
+  flex-direction: column;
+}
+.adminButtons button{
+  border: none;
+  width: 200px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.itemImage img{
+  background-color: aquamarine;
+  width: 280px;
+  height: 340px;
+  margin-bottom: 10px;
+}
+.fullItem button{
+  width: 280px;
+  height: 30px;
+  border: none;
+  margin-top: 20px;
+}
+
+@media (max-width: 330px) {
+  .tile{
+    text-transform: capitalize;
+    width: 130px;
+    height: 180px;
+    font-size: 10px;
+    
+  }
+  .tile img{
+    width: 130px;
+    height: 180px;
+    
+  }
+}
+@media (max-width: 280px) {
+  .tile{
+    text-transform: capitalize;
+    width: 100px;
+    height: 150px;
+    font-size: 10px;
+    
+  }
+  .tile img{
+    width: 100px;
+    height: 130px;
+    
+  }
+}

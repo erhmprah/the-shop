@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="" alt="" /></div>
+      <div class="title">
+        <h1>Shop</h1>
+      </div>
+    </header>
+    <main>
+      <form action="">
+        <input
+          type="search"
+          name=""
+          id=""
+          class="form-control"
+          placeholder="search"
+        />
+      </form>
+
+      <div class="displayContainer">
+        <div class="header">Brands</div>
+        <div class="categoriesDisplayContainer">
+          <div class="categoriesDisplayList" onclick="getBrand('Adidas')">
+            <img src="images/brands/adidas.png" alt="">
+          </div>
+          
+          <div class="categoriesDisplayList" onclick="getBrand('Nike')">
+            <img src="images/brands/nike.png" alt="">
+          </div>
+          
+          <div class="categoriesDisplayList" onclick="getBrand('Supreme')">
+            <img src="images/brands/supreme.png" alt="">
+          </div>
+          
+          <div class="categoriesDisplayList" onclick="getBrand(`Chanel`)">
+            <img src="images/brands/channel.jpg" alt="">
+          </div>
+          
+          <div class="categoriesDisplayList" onclick="getBrand('D&G')"> <img src="images/brands/ducci gabana.png" alt=""></div>
+          
+          <div class="categoriesDisplayList" onclick="getBrand('Gucci')">
+            <img src="images/brands/gucci.png" alt="">
+          </div>
+          
+          <div class="categoriesDisplayList" onclick="getBrand('Off white')">
+            <img src="images/brands/offwhite.png" alt="">
+          </div>
+          
+          <div class="categoriesDisplayList" onclick="getBrand('Kappa')"> <img src="images/brands/kappa.png" alt=""></div>
+          
+          
+        </div>
+
+
+      </div>
+
+      <div class="displayContainer">
+        <div class="header">Trending</div>
+        <div class="trendingDisplayContainer">
+          <% for(row of rows){ %>
+          <div class="trendingDisplayList" onclick="getTrending('<%= row.name %>')">
+              <img src="<%= row.image %>" alt="">
+              <div class="trending" style="margin-top: 5px;">
+               <div class="trendingName" style="font-size: 10px;">
+                <%= row.name %>
+               </div>
+               <div class="tredingPrice" style="margin-right: 5px;font-size: 10px;"><%= row.price %> </div>  
+              </div>
+          
+          </div>
+          <% } %>
+          
+        </div>
+      </div>
+
+      <div class="displayContainer">
+        <div class="header">Categories</div>
+        <div class="brandDisplayContainer">
+          <div class="brandDisplayList" onclick="getCategory('sneakers')">
+            <div class="brandImage">
+              <img src="images/categories/sneaker.jpg" alt="">
+            </div>
+            <div class="brandName">Sneakers</div>
+          </div>
+          <div class="brandDisplayList" onclick="getCategory('Trousers')">
+            <div class="brandImage">
+              <img src="images/categories/trousers.jfif" alt="">
+            </div>
+            <div class="brandName">Trousers</div>
+          </div>
+
+          
+          <div class="brandDisplayList" onclick="getCategory('Sandals')">
+            <div class="brandImage">
+              <img src="images/categories/sandals.jfif" alt="">
+            </div>
+            <div class="brandName">Sandals</div>
+          </div>
+
+          <div class="brandDisplayList" onclick="getCategory('Shorts')">
+            <div class="brandImage">
+              <img src="images/categories/shorts.jfif" alt="">
+            </div>
+            <div class="brandName">Shorts</div>
+          </div>
+
+          <div class="brandDisplayList" onclick="getCategory('Shirts')">
+            <div class="brandImage">
+              <img src="images/categories/shirt.jfif" alt="">
+            </div>
+            <div class="brandName">Shirts</div>
+          </div>
+
+          <div class="brandDisplayList" onclick="getCategory('Slippers')">
+            <div class="brandImage">
+              <img src="images/categories/slippers.jfif" alt="">
+            </div>
+            <div class="brandName">Slippers</div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <form action="/tiles" id="hiddenForm" method="get">
+        <input type="hidden" name="hiddenInput" id="hiddenInputField" value="">
+      </form>
+    </main>
+    <script src="js/indexPage.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> 
+  </body>
+  
+</html>

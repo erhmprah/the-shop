@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="" alt="" /></div>
+      <div class="title">
+        <h1>Shop</h1>
+      </div>
+    </header>
+    <div class="container-">
+        <form action="">
+            <input
+              type="search"
+              name=""
+              id=""
+              class="form-control"
+              placeholder="search"
+            />
+          </form>
+    
+          <div class="tilesContainer">
+            <div class="tilesListContainer" >
+                <div class="row row-cols  gy-2" >
+                  <% for(row of rows){ %>
+                    <div class="col" onclick="getFullItemId('<%= row.iditem %>')">
+                        <div class="tile" >
+                          <div class="tileImage">
+                            <img src="<%= row.image %>" alt="">
+                          </div>
+                          <div class="tileBrand" style="margin-top: 10px;">
+                            <%= row.brand %>
+                          </div>
+                          <div class="tileName&Price" style="display: flex;justify-content: space-between;">
+                            <div class="tileName"><%= row.name %></div>
+                            <div class="tilePrice"><%= row.price %></div>
+                          </div>
+                        </div>
+                    </div>
+                    <%} %>
+
+                    
+                
+                    
+                    
+                </div>
+            </div>
+          </div>
+
+
+          <form action="full" id="hiddenForm" method="get">
+            <input type="hidden" name="hiddenInput" id="hiddenInputField" value="">
+          </form>
+      
+    
+          
+    </div>
+    <script src="js/tiles.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
