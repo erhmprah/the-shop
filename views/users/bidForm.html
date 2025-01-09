@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header>
+    <div class="logo"><img src="" alt="" /></div>
+    <div class="title" style="display: flex;">
+      <img id="backButton" style="width: 30px; height: 30px;" src="images/back.png" alt="">
+      <h1 style="font-weight: bold; margin-left: 10px;">Marco's Collections</h1>
+    </div>
+  </header>
+    <div class="container-" style="display: flex; flex-direction: column; height: 100vh;  align-items: center; ">
+      <p style="margin-top: 40px;">Enter your details to place bid</p>
+        <form action="/bidPost" method="post" id="bidForm" class="bidForm" style="margin-top: 60px;">
+        
+            <input type="text" name="name" id="username" placeholder="Name" required>
+            <br><br>
+            <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+            <br><br>
+            <input type="number" name="size" id="size" placeholder="Size">
+            <br><br>
+            <input type="hidden" name="hidden" id="hidden" placeholder="hidden" value="">
+            <br><br>
+            <button onclick="PassFullId()">Submit</button>
+        </form>
+
+          
+    </div>
+
+    <script src="js/back.js"></script>
+    <script src="js/passFullId.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

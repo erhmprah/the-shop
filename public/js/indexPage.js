@@ -22,4 +22,3 @@ function getTrending(trendingKeyword){
     hiddenForm.submit()
 }
 
-

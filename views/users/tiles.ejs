@@ -10,20 +10,22 @@
   <body>
     <header>
       <div class="logo"><img src="" alt="" /></div>
-      <div class="title">
-        <h1>Shop</h1>
+      <div class="title" style="display: flex; ">
+        <img id="backButton" style="width: 30px; height: 30px;" src="images/back.png" alt="">
+        <h1 style="font-weight: bold;margin-left: 10px">Marco's Collections</h1>
       </div>
     </header>
     <div class="container-">
-        <form action="">
-            <input
-              type="search"
-              name=""
-              id=""
-              class="form-control"
-              placeholder="search"
-            />
-          </form>
+      <form action="/tiles" method="get" id="searchForm"> 
+        <input
+          type="search"
+          name="hiddenInput"
+          id="searchInputField"
+          class="form-control"
+          placeholder="search"
+          style="background-color: rgba(210, 226, 240, 0.822); border: solid black 1px;border-radius: 20px; margin-top: 10px;"
+        />
+      </form>
     
           <div class="tilesContainer">
             <div class="tilesListContainer" >
@@ -54,15 +56,15 @@
           </div>
 
 
-          <form action="full" id="hiddenForm" method="get">
+          <form action="/full" id="hiddenForm" method="get">
             <input type="hidden" name="hiddenInput" id="hiddenInputField" value="">
           </form>
       
     
           
     </div>
+    <script src="js/back.js"></script>
     <script src="js/tiles.js"></script>
-
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -4,6 +4,9 @@ const insertItem = require("../api/addItem")
 const upload = require("../middleware/multer")
 const adminFetch = require("../api/adminView")
 const adminDelete = require("../api/adminDelete")
+const getBids = require("../api/bidDisplay")
+const deleteBid = require("../api/deleteBid")
+const getBidImage = require("../api/getBidIMage")
 const router = express.Router()
 
 
@@ -20,9 +23,10 @@ router.get("/view", adminFetch)
 
 router.get("/delete",adminDelete)
 
-router.get("/bid", (req,res)=>{
-    res.sendFile(path.join(__dirname,"..","views","admin","bid.html"))
-})
+router.get("/bid", getBids)
+router.get("/deleteBid",deleteBid)
+router.get("/bidImage",getBidImage)
+
 
 
 

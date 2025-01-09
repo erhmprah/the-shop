@@ -10,18 +10,20 @@
   <body>
     <header>
       <div class="logo"><img src="" alt="" /></div>
-      <div class="title">
-        <h1>Shop</h1>
+      <div class="title" >
+       
+        <h1 style="font-weight: bold;">Marco's Collections</h1>
       </div>
     </header>
     <main>
-      <form action="">
+      <form action="/tiles" method="get" id="hiddenForm"> 
         <input
           type="search"
-          name=""
-          id=""
+          name="hiddenInput"
+          id="hiddenInputField"
           class="form-control"
           placeholder="search"
+          style="background-color: rgba(210, 226, 240, 0.822); border: solid black 1px;border-radius: 20px; margin-top: 10px;"
         />
       </form>
 
@@ -36,26 +38,12 @@
             <img src="images/brands/nike.png" alt="">
           </div>
           
-          <div class="categoriesDisplayList" onclick="getBrand('Supreme')">
-            <img src="images/brands/supreme.png" alt="">
+          
+          <div class="categoriesDisplayList" onclick="getBrand('Jordan')">
+            <img src="images/brands/jordan.png.png" alt="">
           </div>
           
-          <div class="categoriesDisplayList" onclick="getBrand(`Chanel`)">
-            <img src="images/brands/channel.jpg" alt="">
-          </div>
-          
-          <div class="categoriesDisplayList" onclick="getBrand('D&G')"> <img src="images/brands/ducci gabana.png" alt=""></div>
-          
-          <div class="categoriesDisplayList" onclick="getBrand('Gucci')">
-            <img src="images/brands/gucci.png" alt="">
-          </div>
-          
-          <div class="categoriesDisplayList" onclick="getBrand('Off white')">
-            <img src="images/brands/offwhite.png" alt="">
-          </div>
-          
-          <div class="categoriesDisplayList" onclick="getBrand('Kappa')"> <img src="images/brands/kappa.png" alt=""></div>
-          
+         
           
         </div>
 
@@ -63,7 +51,12 @@
       </div>
 
       <div class="displayContainer">
-        <div class="header">Trending</div>
+        <div class="header" style="display: flex;justify-content: space-between;">
+          <div>Trending</div>
+          <div style="font-weight: normal;" onclick="getCategory('%%')">See more</div>
+          </div>
+        
+
         <div class="trendingDisplayContainer">
           <% for(row of rows){ %>
           <div class="trendingDisplayList" onclick="getTrending('<%= row.name %>')">
@@ -77,13 +70,13 @@
           
           </div>
           <% } %>
-          
+        
         </div>
       </div>
 
       <div class="displayContainer">
-        <div class="header">Categories</div>
-        <div class="brandDisplayContainer">
+        <div class="header"> Categories</div>
+        <div class="brandDisplayContainer" >
           <div class="brandDisplayList" onclick="getCategory('sneakers')">
             <div class="brandImage">
               <img src="images/categories/sneaker.jpg" alt="">
@@ -97,13 +90,7 @@
             <div class="brandName">Trousers</div>
           </div>
 
-          
-          <div class="brandDisplayList" onclick="getCategory('Sandals')">
-            <div class="brandImage">
-              <img src="images/categories/sandals.jfif" alt="">
-            </div>
-            <div class="brandName">Sandals</div>
-          </div>
+        
 
           <div class="brandDisplayList" onclick="getCategory('Shorts')">
             <div class="brandImage">

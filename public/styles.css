@@ -3,16 +3,20 @@
 body {
   height: 100vh;
   padding: 10px;
+  background-color: rgb(196, 219, 240);
 }
 
 header {
   height: 10vh;
   text-align: center;
+  
+
 }
 
 .header {
   margin-bottom: 10px;
   font-weight: bold;
+  font-style: italic;
 }
 
 main {
@@ -31,7 +35,8 @@ footer {
 .categoriesDisplayContainer {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  justify-content: space-evenly;
+  background-color: rgb(210, 226, 240);
 }
 
 .categoriesDisplayList {
@@ -49,17 +54,21 @@ footer {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+
 }
 .trendingDisplayList {
   
   height: 200px;
   min-width: 150px;
   margin-right: 20px;
+  border-radius: 20px;
+  background-color: rgba(210, 226, 240, 0.822);
 }
 
 .trendingDisplayList img{
   height: 160px;
   width: 150px;
+  border-radius: 20px;
 }
 .trending{
   font-weight: bold;
@@ -74,23 +83,26 @@ footer {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+  background-color: rgb(210, 226, 240);
 }
 .brandDisplayList {
  
-  height: 80px;
+  height: 90px;
   min-width: 80px;
   margin-right: 20px;
+  border-radius: 360px;
 }
 .brandDisplayList img {
-  
-  height: 60px;
-  min-width: 80px;
+  border-radius: 360px;
+  height: 70px;
+  width: 70px;
 
 }
 .brandName{
   font-size: 12px;
   font-weight: bold;
   text-align: center;
+  margin-left: -9px;
 }
 .tile{
   text-transform: capitalize;
@@ -159,4 +171,24 @@ footer {
     height: 130px;
     
   }
+}
+
+.bidForm input{
+height: 40px;
+border-radius: 10px;
+width: 100%;
+
+
+}
+.bidForm button{
+height: 40px;
+border-radius: 10px;
+width: 100%;
+
+
+}
+
+table tr td{
+  border: black, solid 2px;
+  padding: 10px;
 }
