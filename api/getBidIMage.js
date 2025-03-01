@@ -1,4 +1,4 @@
-const { resolveInclude } = require("ejs")
+
 const connection = require("../connection")
 const path = require("path")
 async function getBidImage(req,res){
@@ -9,11 +9,6 @@ async function getBidImage(req,res){
 try{
 
     const promiseQuery = ()=>{
-
-
-       
-
-
         return new Promise((resolve,reject)=>{
             connection.query(query,(err,row)=>{
 
@@ -27,16 +22,11 @@ try{
            
         })
 
-        
-
-
     }   
 
     const image = await promiseQuery()
     res.render(path.join(__dirname,"..","views","admin","itemImage.ejs"),{result:image})
     console.log(image)
-
-
 
 }catch(error){
     console.log("cannot fetch image",error.stack

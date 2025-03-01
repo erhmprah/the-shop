@@ -3,9 +3,6 @@ const path = require("path")
 
 async function getBids(req,res){
     const fetchQuery = "SELECT * FROM bid"
-
-    
-
         try{
             const promiseQuery = ()=>{
             return new Promise((resolve,reject)=>{
